@@ -1,0 +1,62 @@
+QL> create table shoopingmall(billid number(10),
+  2  custname varchar2(10),
+  3  phno number(10),
+  4  billamount number(15));
+
+Table created.
+
+SQL> insert into shoopingmall values(1,'srinu',70368616,1000);
+
+1 row created.
+
+SQL> insert into shoopingmall values(1,'vidya',81793829,5000);
+
+1 row created.
+
+SQL> insert into shoopingmall values(3,'sri',81793828,500);
+
+1 row created.
+
+SQL> insert into shoopingmall values(4,'bhuvana',73963222,6000);
+
+1 row created.
+
+SQL> select *from shoopingmall;
+
+    BILLID CUSTNAME         PHNO BILLAMOUNT
+---------- ---------- ---------- ----------
+         1 srinu        70368616       1000
+         1 vidya        81793829       5000
+         3 sri          81793828        500
+         4 bhuvana      73963222       6000
+
+SQL> select sum(billamount)from shoopingmall;
+
+SUM(BILLAMOUNT)
+---------------
+          12500
+
+SQL> select max(billamount)from shoopingmall;
+
+MAX(BILLAMOUNT)
+---------------
+           6000
+
+SQL> select min(billamount)from shoopingmall;
+
+MIN(BILLAMOUNT)
+---------------
+            500
+
+SQL> select avg(billamount)from shoopingmall;
+
+AVG(BILLAMOUNT)
+---------------
+           3125
+
+SQL> select count(custname)from shoopingmall;
+
+COUNT(CUSTNAME)
+---------------
+              4
+0 comments on c
